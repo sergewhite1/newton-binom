@@ -4,4 +4,10 @@ set(PROJECT_NAME newton-binom-exe)
 
 project(${PROJECT_NAME})
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_library(comb_lib OBJECT 
+  comb.cpp
+  comb.h
+)
+
+add_executable(${PROJECT_NAME} main.cpp $<TARGET_OBJECTS:comb_lib>)
+target_link_libraries(${PROJECT_NAME} stdc++)
