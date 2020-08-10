@@ -12,7 +12,16 @@ int TestCase1() {
   return 1;
 }
 
-static const TestCaseProc TestCases[] = {nullptr, TestCase1};
+int TestCase2() {
+  uint64_t c = comb(0, 0);
+  if (c == 1) {
+    return 0;
+  }
+  return 1;
+}
+
+
+static const TestCaseProc TestCases[] = {nullptr, TestCase1, TestCase2};
 
 
 int main(int argc, char* argv[]) {
