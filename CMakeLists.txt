@@ -4,6 +4,8 @@ set(PROJECT_NAME newton-binom-project)
 
 project(${PROJECT_NAME})
 
+#set(CMAKE_VERBOSE_MAKEFILE TRUE)
+
 add_subdirectory(src)
 
 enable_testing()
