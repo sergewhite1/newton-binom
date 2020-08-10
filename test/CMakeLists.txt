@@ -11,6 +11,6 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   target_compile_options(${PROJECT_NAME} PUBLIC -Wall -Wextra)
 endif()
 
-foreach(i RANGE 1 2)
+foreach(i RANGE 1 5)
   add_test(${PROJECT_NAME}_${i} ${PROJECT_NAME} ${i})
 endforeach()
