@@ -1,6 +1,6 @@
 #include <cstdlib>
 
-#include "../src/comb.h"
+#include "../../src/comb.h"
 
 typedef int (*TestCaseProc)();
 
