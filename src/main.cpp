@@ -12,6 +12,14 @@ int main() {
     uint64_t c = comb(n, m);
 
     std::cout << "comb(" << n << ", " << m << ") = " << c << std::endl;
+
+    uint64_t C1 = comb(n, m) + comb(n, m - 1);
+    std::cout << "C1 = comb(n, m) + comb(n, m - 1) = " << C1 << std::endl;
+
+    uint64_t C2 = comb(n + 1, m);
+    std::cout << "C2 = comb(n + 1, m) = " << C2 << std::endl;
+    std::cout << "C2 - C1 = " << C2 - C1 << std::endl;
+
   }
 
   std::cout << "===================================" << std::endl;
