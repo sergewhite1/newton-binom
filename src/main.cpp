@@ -31,14 +31,23 @@ int main() {
   for (int m = 0; m <= n + 1; ++m) {
     B1 += comb(n + 1, m) * powi(a, n + 1 - m) * powi(b, m);
   }
-  std::cout << "B1 = " << B1 << std::endl;
+  std::cout << "B1 = " << B1 << " B1 - A1 = " << B1 - A1 << std::endl;
 
   int B2 = 0;
   for (int m = 0; m <= n; ++m) {
     B2 += comb(n, m) * powi(a, n + 1 - m) * powi(b, m);
     B2 += comb(n, m) * powi(a, n - m)     * powi(b, m + 1);
   }
-  std::cout << "B2 = " << B2 << std::endl;
+  std::cout << "B2 = " << B2 << " B2 - A1 = " << B2 - A1 << std::endl;
+
+  int B3 = powi(a, n + 1) + powi(b, n + 1);
+  for (int m = 1; m <= n; ++m) {
+    B3 += comb(n, m) * powi(a, n + 1 - m) * powi(b, m);
+  }
+  for (int m = 0; m <= n - 1; ++m) {
+    B3 += comb(n, m) * powi(a, n - m) * powi(b, m + 1);
+  }
+  std::cout << "B3 = " << B3 << " B3 - A1 = " << B3 - A1 << std::endl;
   
   return 0;
 }
