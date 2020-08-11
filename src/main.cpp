@@ -49,6 +49,12 @@ int main() {
   }
   std::cout << "B3 = " << B3 << " B3 - A1 = " << B3 - A1 << std::endl;
   
+  int B4 = powi(a, n + 1) + powi(b, n + 1);
+  for (int m = 1; m <= n; ++m) {
+    B4 += comb(n + 1, m) * powi(a, n + 1 - m) * powi(b, m);
+  }
+  std::cout << "B4 = " << B4 << " B4 - A1 = " << B4 - A1 << std::endl;
+
   return 0;
 }
 
